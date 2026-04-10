@@ -190,3 +190,74 @@
 | 3 | โซลาร์ทำงานยังไง? | 📋 ต้องเขียน |
 | ... | ... | ... |
 | 20 | เทคโนโลยีอนาคต + สรุป | 📋 ต้องเขียน |
+
+---
+
+## 🛒 Affiliate Section (แบบที่ 2 - Styled Box)
+
+```html
+<hr style="border: none; border-top: 2px solid #e2e8f0; margin: 30px 0;">
+
+<div style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); color: white; padding: 25px; border-radius: 15px; margin: 25px 0;">
+<h3 style="color: white; margin-top: 0; font-size: 1.3em;">🛒 สินค้าที่แนะนำสำหรับบทเรียนนี้</h3>
+<p style="color: #ffe0db; margin-bottom: 20px;">เลือกซื้อสินค้าคุณภาพผ่านลิงก์ของเรา เพื่อรับค่าคอมมิชชันสนับสนุนการทำบทความต่อไป 💚</p>
+
+<!-- สินค้าที่ 1 -->
+<div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+<div style="flex: 1; min-width: 250px;">
+<p style="margin: 0 0 5px 0; font-weight: bold; font-size: 1.1em;">📦 [ชื่อสินค้าที่ 1]</p>
+<p style="margin: 0 0 5px 0; color: #ffe0db;">[รายละเอียดสั้นๆ]</p>
+<p style="margin: 0; color: #ffd700; font-weight: bold;">💰 [ราคา]</p>
+</div>
+<a href="[AFFILIATE_LINK_1]" style="background: white; color: #e53e3e; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; white-space: nowrap;">ดูสินค้า →</a>
+</div>
+</div>
+
+<!-- สินค้าที่ 2 -->
+<div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+<div style="flex: 1; min-width: 250px;">
+<p style="margin: 0 0 5px 0; font-weight: bold; font-size: 1.1em;">📚 [ชื่อสินค้าที่ 2]</p>
+<p style="margin: 0 0 5px 0; color: #ffe0db;">[รายละเอียดสั้นๆ]</p>
+<p style="margin: 0; color: #ffd700; font-weight: bold;">💰 [ราคา]</p>
+</div>
+<a href="[AFFILIATE_LINK_2]" style="background: white; color: #e53e3e; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; white-space: nowrap;">ดูสินค้า →</a>
+</div>
+</div>
+
+<!-- สินค้าที่ 3 (ถ้ามี) -->
+<div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px;">
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+<div style="flex: 1; min-width: 250px;">
+<p style="margin: 0 0 5px 0; font-weight: bold; font-size: 1.1em;">📖 [ชื่อสินค้าที่ 3]</p>
+<p style="margin: 0 0 5px 0; color: #ffe0db;">[รายละเอียดสั้นๆ]</p>
+<p style="margin: 0; color: #ffd700; font-weight: bold;">💰 [ราคา]</p>
+</div>
+<a href="[AFFILIATE_LINK_3]" style="background: white; color: #e53e3e; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; white-space: nowrap;">ดูสินค้า →</a>
+</div>
+</div>
+
+<p style="color: #ffe0db; font-size: 0.9em; margin-top: 15px; margin-bottom: 0; text-align: center;">
+💡 ราคาและข้อมูลอ้างอิง ณ วันที่ [DD MMMM YYYY] | อาจมีการเปลี่ยนแปลง
+</p>
+</div>
+```
+
+---
+
+## 📋 วิธีใช้ Affiliate Section
+
+1. คัดลอกโค้ดด้านบน
+2. แทนที่ `[ชื่อสินค้า]`, `[รายละเอียด]`, `[ราคา]`, `[AFFILIATE_LINK_X]`
+3. วางก่อน Author Section ในบทความ
+
+---
+
+## 📦 Affiliate Links ที่ใช้แล้ว
+
+| ลิงก์ | สินค้า | ราคา |
+|-------|--------|------|
+| https://s.shopee.co.th/5fki6d1WXH | แผงโซลาร์ MONO 500W-1000W | ฿2,899 - ฿4,599 |
+| https://s.shopee.co.th/LjBkR3gEJ | คู่มือติดตั้งโซลาร์บนหลังคา | ฿300 |
+| https://s.shopee.co.th/3qJ3v2I94s | คู่มือติดตั้งปั๊มน้ำโซลาร์ | ฿999 |
