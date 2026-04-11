@@ -1,0 +1,15 @@
+{
+  "last_published": 2,
+  "episode_1": {
+    "published_at": "2026-04-10T21:12:00+07:00",
+    "title": "ทำไมต้องสนใจโซลาร์ตอนนี้?",
+    "wordpress_url": "https://blog.joe-data.uk/solar-episode-1-why-solar-now/",
+    "github_url": "https://github.com/Nub-1/Nub-1-Blog/blob/main/solar-articles/01-why-solar-now-2026-github.md"
+  },
+  "episode_2": {
+    "published_at": "2026-04-11T11:41:00+07:00",
+    "title": "ต้องรู้อะไรก่อนติดโซลาร์?",
+    "wordpress_url": "https://blog.joe-data.uk/solar-episode-2-before-solar/",
+    "github_url": "https://github.com/Nub-1/Nub-1-Blog/blob/main/solar-articles/02-before-solar-2026.md"
+  }
+}
