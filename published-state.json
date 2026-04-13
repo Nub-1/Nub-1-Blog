@@ -13,9 +13,17 @@
     "github_url": "https://github.com/Nub-1/Nub-1-Blog/blob/main/solar-articles/02-before-solar-2026.md"
   },
   "episode_3": {
-    "published_at": "2026-04-12T14:10:00+07:00",
-    "title": "โซลาร์ทำงานยังไง?",
+    "published_at": "2026-04-13T19:05:00+07:00",
+    "title": "ตอนที่ 3: โซลาร์ทำงานยังไง?",
     "wordpress_url": "https://blog.joe-data.uk/solar-episode-3-how-solar-works/",
-    "github_url": "https://github.com/Nub-1/Nub-1-Blog/blob/main/solar-articles/03-how-solar-works-2026.md"
+    "github_url": "https://github.com/Nub-1/Nub-1-Blog/blob/main/solar-articles/03-how-solar-works-2026.md",
+    "featured_image": "https://blog.joe-data.uk/wp-content/uploads/2026/04/solar-episode-3-cover-1.png",
+    "local_cover": "images/solar-episode-3-cover.png",
+    "section_images": [
+      "images/sections/solar-episode-3-components.png",
+      "images/sections/solar-episode-3-pv-effect.png",
+      "images/sections/solar-episode-3-sizes.png",
+      "images/sections/solar-episode-3-efficiency.png"
+    ]
   }
 }
