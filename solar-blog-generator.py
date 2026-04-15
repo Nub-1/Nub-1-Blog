@@ -372,7 +372,8 @@ def upload_wordpress(episode, title, content, image_path, slug):
         'title': title,
         'content': html_content,
         'categories': WP_CATEGORY_ID,
-        'status': 'publish'
+        'status': 'publish',
+        'slug': slug
     }
 
     try:
