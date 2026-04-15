@@ -356,13 +356,89 @@ def save_markdown(episode, content):
     return filepath
 
 
+def md_to_html(text):
+    """แปลง markdown เป็น HTML อย่างง่าย"""
+    import re
+
+    # Code blocks
+    text = re.sub(r'```[\s\S]*?```', lambda m: '<pre>' + m.group(0)[3:-3] + '</pre>', text)
+
+    # Inline code
+    text = re.sub(r'`([^`]+)`', r'<code>\1</code>', text)
+
+    # Headers (h1, h2, h3) - แปลงเป็น h2/h3/h4 เพื่อไม่ชนกับ WordPress
+    lines = []
+    for line in text.split('\n'):
+        if line.startswith('#### '):
+            lines.append('<h4>' + line[5:] + '</h4>')
+        elif line.startswith('### '):
+            lines.append('<h3>' + line[4:] + '</h3>')
+        elif line.startswith('## '):
+            lines.append('<h4><strong>' + line[3:] + '</strong></h4>')  # ## = bold subheading
+        elif line.startswith('# '):
+            lines.append('<h2>' + line[2:] + '</h2>')
+        else:
+            lines.append(line)
+    text = '\n'.join(lines)
+
+    # Horizontal rule
+    text = re.sub(r'^---$', '<hr>', text, flags=re.MULTILINE)
+
+    # Bold (**text**)
+    text = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', text)
+
+    # Lists - ขยาย --- ให้เป็น list items
+    html_parts = []
+    in_list = False
+    for line in text.split('\n'):
+        # List items start with - or *
+        m = re.match(r'^[-*] (.+)$', line.strip())
+        if m:
+            if not in_list:
+                html_parts.append('<ul>')
+                in_list = True
+            html_parts.append('<li>' + m.group(1) + '</li>')
+        else:
+            if in_list:
+                html_parts.append('</ul>')
+                in_list = False
+            html_parts.append(line)
+    if in_list:
+        html_parts.append('</ul>')
+    text = '\n'.join(html_parts)
+
+    # Paragraphs - group consecutive non-empty lines
+    paragraphs = []
+    current_para = []
+    for line in text.split('\n'):
+        stripped = line.strip()
+        if stripped == '' or stripped.startswith('<h') or stripped.startswith('<ul') or stripped.startswith('<li') or stripped.startswith('<pre') or stripped.startswith('<hr') or stripped.startswith('<code'):
+            if current_para:
+                paragraphs.append('<p>' + '<br>\n'.join(current_para) + '</p>')
+                current_para = []
+            paragraphs.append(stripped)
+        else:
+            current_para.append(stripped)
+    if current_para:
+        paragraphs.append('<p>' + '<br>\n'.join(current_para) + '</p>')
+
+    text = '\n'.join(paragraphs)
+
+    # Clean up
+    text = text.replace('\n', '')
+    text = re.sub(r'<p></p>', '', text)
+    text = re.sub(r'<p>(<h[234]>.*?</h[234]>)</p>', r'\1', text)
+    text = re.sub(r'<p>(<ul>.*?</ul>)</p>', r'\1', text)
+    text = re.sub(r'<p>(<pre>.*?</pre>)</p>', r'\1', text)
+    text = re.sub(r'<p>(<hr>)</p>', r'\1', text)
+
+    return text
+
+
 def upload_wordpress(episode, title, content, image_path, slug):
     """อัปโหลดบทความขึ้น WordPress"""
-    # แปลง markdown เป็น HTML (แบบง่าย)
-    html_content = content.replace('\n', '<br>\n')
-    html_content = html_content.replace('# ', '<h2>').replace(' #', '</h2>')
-    html_content = html_content.replace('## ', '<h3>').replace(' ##', '</h3>')
-    html_content = html_content.replace('**', '<strong>').replace('**', '</strong>')
+    # แปลง markdown เป็น HTML
+    html_content = md_to_html(content)
 
     url = f"{BLOG_URL}/wp-json/wp/v2/posts"
     files = {
