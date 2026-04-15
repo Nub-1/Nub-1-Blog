@@ -287,13 +287,15 @@ ARTICLES = {
     },
     4: {
         "title": "On-Grid vs Off-Grid vs Hybrid เลือกอันไหนดี?",
-        "slug": "on-grid-off-grid-hybrid-2026",
+        "slug": "solar-on-grid-off-grid-hybrid-explained",
+        "old_slug": "on-grid-off-grid-hybrid-2026",
         "prompt_image": "Three solar system diagrams showing grid connection, battery storage, and hybrid setup, Thailand house, infographic style",
         "content": f"file:{ARTICLE_FILES_DIR}/04-on-grid-off-grid-hybrid-2026.md"
     },
     5: {
         "title": "วิธีคำนวณขนาดระบบโซลาร์ที่เหมาะกับบ้านคุณ",
-        "slug": "how-to-calculate-solar-size-2026",
+        "slug": "solar-system-size-calculation-guide",
+        "old_slug": "how-to-calculate-solar-size-2026",
         "prompt_image": "Solar calculator with house roof diagram, showing kWp calculation, Thailand home setting, practical illustration",
         "content": f"file:{ARTICLE_FILES_DIR}/05-how-to-calculate-solar-size-2026.md"
     },
