@@ -297,6 +297,12 @@ ARTICLES = {
         "prompt_image": "Solar calculator with house roof diagram, showing kWp calculation, Thailand home setting, practical illustration",
         "content": f"file:{ARTICLE_FILES_DIR}/05-how-to-calculate-solar-size-2026.md"
     },
+    6: {
+        "title": "วิธีดูแลรักษาโซลาร์ให้อยู่ 25-30 ปี",
+        "slug": "how-to-maintain-solar-2026",
+        "prompt_image": "Solar panel maintenance checklist, cleaning solar panels on rooftop, Thailand house, 4:3 horizontal",
+        "content": f"file:{ARTICLE_FILES_DIR}/06-how-to-maintain-solar-2026.md"
+    },
 }
 
 
